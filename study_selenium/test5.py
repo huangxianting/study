@@ -1,10 +1,10 @@
 #-*-coding=utf-8
 
 from selenium import webdriver
-
+from selenium.webdriver.common import alert
 import os,time
 
-driver= webdriver.Firefox()
+driver= webdriver.Chrome()
 
 driver.get("http://www.baidu.com")
 
@@ -29,6 +29,10 @@ m.find_element_by_xpath("//*[@id='nr']/option[3]").click()
 
 driver.find_element_by_xpath('//*[@id="gxszButton"]/a[1]').click()
 
+driver.switchTo().alert()
+alert.Alert.accept()
+#driver.switch_to_alert().accept()
+
 
 #跳转到百度首页后，进行搜索表（一页应该显示50条结果）
 
@@ -37,4 +41,3 @@ driver.find_element_by_id("kw").send_keys("selenium")
 driver.find_element_by_id("su").click()
 
 time.sleep(3)
-

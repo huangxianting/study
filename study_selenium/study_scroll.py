@@ -46,7 +46,7 @@ dr.switch_to_frame('main')
 dr.find_element_by_xpath('//*[@id="professions2"]/a[1]/div').click()
 
 # 滚动人才列表
-# dr.switch_to_frame('main')
+dr.switch_to_frame('main')
 js = 'document.getElementById("list").scrollTop=200'
 time.sleep(1)
 dr.execute_script(js)
