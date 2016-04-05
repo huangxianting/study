@@ -42,20 +42,26 @@ finally:
 # finally:
 #     pass
 
-time.sleep(0.5)
-#driver.find_element_by_xpath('//a[@hash="myJob"]').click()
-driver.find_element_by_link_text(u"我的职位").click()
+# time.sleep(0.5)
+# #driver.find_element_by_xpath('//a[@hash="myJob"]').click()
+# driver.find_element_by_link_text(u"我的职位").click()
+#
+# time.sleep(0.5)
+# driver.switch_to_frame('main')
+# driver.find_element_by_xpath('//span[@class="icon-add"]').click()
+#
+# time.sleep(0.5)
+#
+# # 将鼠标移动到职位类别一栏上方
+# m = driver.find_element_by_xpath('//*[@id="categoryInput"]/div/div')
+# webdriver.ActionChains(driver).move_to_element(m).perform()
+#
+# # 选择IOS工程师
+# time.sleep(0.5)
+# driver.find_element_by_xpath('//*[@id="categoryInput"]/div/div/div[2]/ul/li[2]').click()
 
-time.sleep(0.5)
-driver.switch_to_frame('main')
-driver.find_element_by_xpath('//span[@class="icon-add"]').click()
+cookie = driver.get_cookies()
 
-time.sleep(0.5)
+print cookie
 
-# 将鼠标移动到职位类别一栏上方
-m = driver.find_element_by_xpath('//*[@id="categoryInput"]/div/div')
-webdriver.ActionChains(driver).move_to_element(m).perform()
-
-# 选择IOS工程师
-time.sleep(0.5)
-driver.find_element_by_xpath('//*[@id="categoryInput"]/div/div/div[2]/ul/li[2]').click()
+driver.quit()
