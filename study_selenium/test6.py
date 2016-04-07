@@ -105,21 +105,23 @@ __author__ = 'sherry'
 #     print number
 
 # d = {'x':1,'y':2,'z':3}
-# for key in d:
-#     print key,'corrsponds to',d[key]
-
+# for key, v in d.items():
+#     print key,'corrsponds to', v
+#
 # from math import sqrt
 #
 # for n in range(99,0,-1):
 #     root = sqrt(n)
 #     if root == int(root):
-#         print n
-#         break
-
-# while True:
-#     s = raw_input('enter sth:')
-#     if s == 'quit':
-#         break
-#     if len(s) < 3:
+#         print n, root
 #         continue
-#     print 'Input is of sufficient length!'
+
+index = 0
+while index < 3:
+    index += 1
+    s = raw_input('enter sth:')
+    if s == 'quit':
+        break
+    if len(s) < 3:
+        continue
+    print 'Input is of sufficient length!'
