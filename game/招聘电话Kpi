@@ -1,0 +1,14 @@
+#coding:utf-8
+
+import unittest
+import requests
+
+url = 'http://dev.jihui.in/api/event'
+
+pqyload = {query: {operBys: -29384, page: 1, size: 100, totalPages: 41}
+
+cookies = {'JSESSIONID=fcdcd70e-c428-4ae7-8adb-db521a99cfb8; _id=-29384'}
+
+r = requests.post(url, cookies = cookies , date = pqyload)
+
+print r.text
