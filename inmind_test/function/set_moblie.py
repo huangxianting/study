@@ -1,3 +1,5 @@
+from inmind_test.function.get_date import this_week
+
 __author__ = 'sherry'
 
 #coding:utf-8
